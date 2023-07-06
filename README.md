@@ -160,3 +160,69 @@ const Users = mongoose.model('Users', usersSchema)
 
 module.exports = Users
 ```
+
+> <b>21.  **Import the tables in the server.js file**</b>
+```javascript
+//tables
+const Users = require('./models/usersModel')
+//const Products = require('./models/productsModel')
+```
+
+> <b>22.  **API and Queries**</b>
+```javascript
+// Routes
+
+//users
+app.get('/data/users', async(req, res)=>{
+    try {
+        const user = await Users.find({})
+        res.status(200).json(user)
+    } catch (error) {
+        res.status(500).json({message: error.message})
+    }
+})
+
+
+app.post('/add/user', async(req, res)=>{
+    try {
+        const user = await Users.create(req.body)
+        res.status(200).json(user)
+    } catch (error) {
+        res.status(500).json({message: error.message})
+    }
+})
+
+
+app.put('/update/user/:id', async(req, res)=>{
+    try {
+        const {id} = req.params
+        const user = await Users.findByIdAndUpdate(id, req.body)
+        if(!user){
+            return res.status(404).json({message: `cannot find any user with ID ${id}`})
+        }
+        const updateUser = await Users.findById(id)
+        res.status(200).json(updateUser)
+    } catch (error) {
+        res.status(500).json({message: error.message})
+    }
+})
+
+
+app.delete('/delete/user/:id', async(req, res)=>{
+    try {
+        const {id} = req.params
+        const user = await Users.findByIdAndDelete(id)
+        if (!user) {
+            return res.status(404).json({message: `cannot find any user with ID ${id}`})
+        }
+        res.status(200).json(user)
+    } catch (error) {
+        res.status(500).json({message: error.message})
+    }
+})
+```
+
+> <b>23.  **Command to run server**</b>
+```shell
+npm run dev
+```
