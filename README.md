@@ -32,7 +32,7 @@ npm init -y
 > <b>5.  **Create Server.js file**   `NO CODE`</b>
 
 > <b>6.  **Add serve to the scripts object in the package.json file**</b>
-```shell
+```javascript
   "scripts": {
     // ... ,
     "serve": "node server.js",
@@ -51,4 +51,26 @@ npm i express
 const express = require('express')
 const app = express()
 app.use(express.json())
+```
+
+- ### Nodemon
+
+> <b>9.  **Install nodemon**</b>
+```shell
+npm i nodemon -D
+```
+
+> <b>10.  **Add dev to the scripts object in the package.json file**</b>
+```javascript
+  "scripts": {
+    // ... ,
+    "dev": "nodemon server.js",
+  },
+```
+
+- ### Mongoose
+
+> <b>11.  **Install mongoose**</b>
+```shell
+npm i mongoose
 ```
