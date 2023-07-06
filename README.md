@@ -24,9 +24,31 @@ cd backend
 code .
 ```
 
-> <b>4.  **The command to create the package.js file**</b>
+> <b>4.  **The command to create the package.json file**</b>
 ```shell
 npm init -y
 ```
 
-> <b>5.  **Create Server.js file**</b>
+> <b>5.  **Create Server.js file**   `NO CODE`</b>
+
+> <b>6.  **Add serve to the scripts object in the package.json file**</b>
+```shell
+  "scripts": {
+    // ... ,
+    "serve": "node server.js",
+  },
+```
+
+- ### Express
+
+> <b>7.  **Install express**</b>
+```shell
+npm i express
+```
+
+> <b>8.  **Import express in server.js file**</b>
+```javascript
+const express = require('express')
+const app = express()
+app.use(express.json())
+```
