@@ -119,3 +119,44 @@ mongoose
      console.log(error)
  })
 ```
+
+- ### Models
+
+> <b>16.  **Create models folder**   `NO CODE`</b>
+
+> <b>17.  **Create a table file in the models folder, for example, the usersModel.js file**   `NO CODE`</b>
+
+> <b>18.  **Import mongoose in usersModel.js file**</b>
+```javascript
+const mongoose = require('mongoose')
+```
+
+> <b>19.  **Column creation code in usersModel.js file**</b>
+```javascript
+const usersSchema = mongoose.Schema(
+    {
+        name: {
+            type: String,
+            required: true
+        },
+        lastName:{
+            type: String,
+            required: true
+        },
+        password:{
+            type: String,
+            required: true
+        },
+    },
+    {
+        versionKey: false
+    }
+)
+```
+
+> <b>20.  **Export the table in the users.Model.js file**</b>
+```javascript
+const Users = mongoose.model('Users', usersSchema)
+
+module.exports = Users
+```
