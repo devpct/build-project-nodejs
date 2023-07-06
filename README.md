@@ -74,3 +74,48 @@ npm i nodemon -D
 ```shell
 npm i mongoose
 ```
+
+> <b>12.  **Import mongoose in server.js file**</b>
+```javascript
+// const express = require('express')
+const mongoose = require('mongoose')
+```
+
+> <b>13.  **Download mongodb**</b>
+<pre>
+<a href="https://www.mongodb.com/try/download/community">https://www.mongodb.com/try/download/community</a>
+</pre>
+
+> <b>14.  **Connecting to mongodb app in server.js file**</b>
+```javascript
+//connecting to mongoDB
+mongoose
+.connect('mongodb://127.0.0.1:27017/mydb', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => {
+    console.log('Connected to MongoDB')
+    app.listen(3000, ()=>{
+        console.log(`Starting development server at \x1b[34m${'http://localhost'}:${3000}\x1b[0m`)
+    })
+})
+.catch((error) => {
+    console.log(error)
+})
+```
+
+> <b>15.  **Connecting to mongodb web in server.js file**</b>
+```javascript
+//connecting to mongoDB
+ mongoose.
+ connect('mongodb+srv://<Username>:<Password>@cluster0.upbtfer.mongodb.net/<Database Name>?retryWrites=true&w=majority')
+ .then(()=>{
+     console.log('Connected to MongoDB')
+     app.listen(3000, ()=>{
+         console.log(`Starting development server at \x1b[34m${'http://localhost'}:${3000}\x1b[0m`)
+     })
+ }).catch((error)=>{
+     console.log(error)
+ })
+```
