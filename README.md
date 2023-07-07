@@ -41,7 +41,7 @@ npm init -y
 ```
 
 - ### Express
-
+. Express framework node js for api and query and server
 > <b>7.  **Install express**</b>
 ```shell
 npm i express
@@ -55,7 +55,7 @@ app.use(express.json())
 ```
 
 - ### Nodemon
-
+. Nodeman to save changes automatically on the server
 > <b>9.  **Install nodemon**</b>
 ```shell
 npm i nodemon -D
@@ -70,7 +70,7 @@ npm i nodemon -D
 ```
 
 - ### Mongoose
-
+. Mongoose to connect node js to mongoDB
 > <b>11.  **Install mongoose**</b>
 ```shell
 npm i mongoose
@@ -122,7 +122,7 @@ mongoose
 ```
 
 - ### Models
-
+. Models database tables
 > <b>16.  **Create models folder**   `NO CODE`</b>
 
 > <b>17.  **Create a table file in the models folder, for example, the usersModel.js file**   `NO CODE`</b>
