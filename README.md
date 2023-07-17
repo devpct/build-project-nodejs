@@ -25,9 +25,9 @@ cd backend
 code .
 ```
 
-> <b>4.  **The command to create the package.json file**</b>
+> <b>4.  **Install node**</b>
 ```shell
-npm init -y
+npm install node
 ```
 
 > <b>5.  **Create Server.js file**   `NO CODE`</b>
