@@ -170,7 +170,7 @@ const Users = require('./models/usersModel')
 //const Products = require('./models/productsModel')
 ```
 
-> <b>22.  **API and Queries**</b>
+> <b>22.  **API and Queries - ORM**</b>
 ```javascript
 // Routes
 
